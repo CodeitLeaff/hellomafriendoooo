@@ -1,0 +1,644 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Edu+SA+Beginner&family=Rubik+Moonrocks&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Festive&family=Montserrat:wght@300;400;700&display=swap");
+@import url("http://fonts.cdnfonts.com/css/komika-axis");
+
+@media only screen and (min-width: 992px) {
+  /* Navigation bar */
+
+  #brand {
+    z-index: -1;
+    margin-top: 30px;
+    transform: translateY(-25%);
+    height: 50px;
+  }
+
+  .red {
+    color: cyan;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  nav {
+    transition: 0.3s background-color;
+    height: 60px;
+    color: white;
+    text-transform: uppercase;
+    position: fixed;
+    width: 100%;
+  }
+
+  nav .container {
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+
+  #nav {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #nav a {
+    font-size: 20px;
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
+    transition: color 200ms;
+  }
+
+  #nav-mobile {
+    display: none;
+  }
+
+  /* Image and head  */
+  header {
+    background: linear-gradient(rgba(4, 34, 104, 0.2), rgba(0, 0, 0, 0.2)),
+      no-repeat, url(./images/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg);
+
+    height: 100vh;
+
+    background-size: 300%;
+    background-position: left;
+    animation: minecraft 90000ms linear infinite;
+  }
+
+  #header-text {
+    color: #ffffff;
+    width: 100%;
+    font-size: 35px;
+  }
+
+  .head-text {
+    width: 85%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #discord-join {
+    border: 1px solid cyan;
+    text-decoration: none;
+    font-size: min(30px, 7vh);
+    padding: 5px 20px;
+    color: white;
+
+    transition: background 300ms;
+  }
+
+  #discord-join:hover {
+    background: cyan;
+    background-size: 100%;
+  }
+
+  #head-style {
+    display: flex;
+    font-size: min(35px, 9vh);
+    /* justify-content: center; */
+  }
+
+  .head-text {
+    width: 85%;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* text-align: center; */
+  }
+
+  #head-style {
+    display: flex;
+    /* justify-content: center; */
+  }
+
+  #header-text span {
+    font-size: min(40px, 10vh);
+  }
+
+  #span-style {
+    margin-bottom: 2vh;
+  }
+
+  /* About Us  */
+
+  #about-us-text {
+    font-size: 30px;
+    margin-left: 50px;
+  }
+
+  #support-text {
+    font-size: 30px;
+    margin-left: 50px;
+  }
+
+  h3 {
+    font-size: 50px;
+  }
+
+  #copied {
+    right: 40px;
+  }
+}
+
+/* #header-text span {
+  grid-area: ;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 10px;
+} */
+
+@keyframes xerocopy {
+  0% {
+    width: 420px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* tablet  */
+@media only screen and (max-width: 992px) and (min-width: 600px) {
+  .hidden {
+    display: none;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  nav .container {
+    width: 90%;
+    align-items: center;
+  }
+
+  #brand {
+    z-index: -1;
+    margin-top: 25px;
+    transform: translateY(-25%);
+    height: 50px;
+  }
+
+  .menu-button {
+    background: none;
+    border: none;
+    color: white;
+    position: absolute;
+    font-size: 35px;
+    right: 10px;
+    top: 25px;
+    transform: translateY(-50%);
+  }
+
+  #nav {
+    display: none;
+  }
+
+  #nav-mobile {
+    transform: translateX(100%);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    left: 0%;
+    width: 100%;
+    transition: transform 300ms;
+  }
+
+  .transform {
+    transform: translateX(100%);
+  }
+
+  nav {
+    transition: 0.3s background-color;
+
+    height: 50px;
+    color: white;
+    text-transform: uppercase;
+    position: fixed;
+    width: 100%;
+  }
+
+  #nav-mobile a {
+    margin-bottom: 10vh;
+
+    font-size: min(5vh, 1.5rem);
+    color: white;
+    text-decoration: none;
+    transition: color 200ms;
+  }
+
+  /* header and img  */
+
+  header {
+    background: linear-gradient(rgba(4, 34, 104, 0.2), rgba(0, 0, 0, 0.2)),
+      no-repeat, url(./images/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg);
+
+    height: 100vh;
+
+    background-size: 300%;
+    background-position: left;
+    animation: minecraft 90000ms linear infinite;
+  }
+
+  #header-text {
+    color: #ffffff;
+    width: 100%;
+    font-size: min(2rem, 7vh);
+  }
+
+  .head-text {
+    width: 85%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #head-style {
+    display: flex;
+    justify-content: center;
+  }
+
+  #discord-join {
+    font-size: min(25px, 6vh);
+    padding: 2px 15px;
+    margin-top: 10vh;
+  }
+
+  #header-text span {
+    font-size: min(1.7rem, 7vh);
+  }
+  #span-style {
+    margin-bottom: 2vh;
+  }
+
+  /* About Us  */
+
+  .about-us img {
+    display: none;
+  }
+
+  section {
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+
+  h3::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100px;
+    margin: auto;
+
+    background: cyan;
+  }
+
+  #copied {
+    left: 50vw;
+    transform: translateX(-50%);
+  }
+
+  /* support */
+
+  .support {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #support-text {
+    margin-top: 30px;
+  }
+}
+
+/* mobile */
+
+@media only screen and (max-width: 600px) {
+  .hidden {
+    display: none;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  nav .container {
+    width: 95%;
+    align-items: center;
+  }
+
+  #brand {
+    z-index: -1;
+    margin-top: 20px;
+    transform: translateY(-25%);
+    height: 40px;
+  }
+
+  .menu-button {
+    background: none;
+    border: none;
+    color: white;
+    position: absolute;
+    font-size: 35px;
+    right: 10px;
+    top: 25px;
+    transform: translateY(-50%);
+  }
+
+  #nav {
+    display: none;
+  }
+
+  #nav-mobile {
+    transform: translateX(100%);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    left: 0%;
+    width: 100%;
+    transition: transform 300ms;
+  }
+
+  .transform {
+    transform: translateX(100%);
+  }
+
+  nav {
+    transition: 0.3s background-color;
+
+    height: 50px;
+    color: white;
+    text-transform: uppercase;
+    position: fixed;
+    width: 100%;
+  }
+
+  #nav-mobile a {
+    margin-bottom: 10vh;
+
+    font-size: min(5vh, 1.5rem);
+    color: white;
+    text-decoration: none;
+    transition: color 200ms;
+  }
+
+  /* header and img  */
+
+  header {
+    background: linear-gradient(rgba(4, 34, 104, 0.2), rgba(0, 0, 0, 0.2)),
+      no-repeat, url(./images/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg);
+
+    height: 100vh;
+
+    background-size: 600%;
+    background-position: left;
+    animation: minecraft 180000ms linear infinite;
+  }
+
+  #header-text {
+    color: #ffffff;
+    width: 100%;
+    font-size: min(1.5rem, 6vh);
+  }
+
+  .head-text {
+    width: 85%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #head-style {
+    display: flex;
+    justify-content: center;
+  }
+
+  #discord-join {
+    font-size: min(20px, 5vh);
+    padding: 2px 15px;
+  }
+
+  #header-text span {
+    font-size: min(1.5rem, 6vh);
+  }
+
+  #span-style {
+    margin-bottom: 2vh;
+  }
+
+  /* About Us */
+
+  .about-us img {
+    display: none;
+  }
+
+  section {
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+
+  h3::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100px;
+    margin: auto;
+
+    background: cyan;
+  }
+
+  #copied {
+    left: 50vw;
+    transform: translateX(-50%);
+  }
+
+  /* support */
+
+  .support {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Header  */
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(19, 19, 19);
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  line-height: 27px;
+}
+
+.head-text h2 {
+  color: white;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+  margin-bottom: 1vh;
+}
+
+#discord-join {
+  border: 2px solid cyan;
+  text-decoration: none;
+  color: white;
+
+  transition: background 300ms;
+}
+
+#discord-join:hover {
+  background-color: cyan;
+  /* background-size: 10%; */
+}
+
+#nav-mobile a:hover,
+#nav a:hover {
+  color: cyan;
+}
+
+/* About Us */
+
+section {
+  background: #1d1d1d;
+  /* height: 1000px; */
+}
+
+.about-us {
+  padding: 150px 0;
+  justify-content: space-between;
+  width: max(80%, 350px);
+}
+
+#about-us div img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50px;
+}
+
+.image {
+  height: 300px;
+  width: 300px;
+}
+
+#about-us-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+
+  height: 300px;
+}
+
+#support-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  /* margin-left: 50px; */
+
+  height: 300px;
+}
+
+section h3 {
+  margin-bottom: 10px;
+  margin-top: -25px;
+}
+
+section p {
+  font-size: 20px;
+}
+
+/* Support  */
+#support {
+  margin: 20px 0;
+  background: #1d1d1d;
+}
+
+.support {
+  width: max(80%, 350px);
+  padding: 100px 0;
+  justify-content: space-between;
+  color: white;
+  display: flex;
+}
+
+.support .copy {
+  background-color: #292929;
+  border-radius: 10px;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: background 200ms;
+}
+
+.support .copy:hover {
+  cursor: pointer;
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+#copied {
+  /* display: none; */
+  background-color: rgb(73, 163, 73);
+  padding: 7px 14px;
+  font-size: 20px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: -100px;
+  /* right: 40px; */
+  transition: bottom 500ms;
+}
+
+.support div {
+  font-size: 20px;
+}
+
+/* Animation */
+
+@keyframes minecraft {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}
+
+.red {
+  color: cyan;
+}

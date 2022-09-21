@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="LightningLeaf" />
+    <meta
+      name="description"
+      content="Chilling Community, Gamers, Nitro, Anime, Emotes, Giveaways, and more"
+    />
+    <meta
+      property="og:image"
+      content="https://terraheaven.web.app/images/thumbnail.webp"
+    />
+    <meta name="url" content="http://www.terraheaven.fun" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon" />
+    <title>Terra Heaven</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div id="nav-mobile" class="off">
+        <a onclick="hide()" href="">Home</a>
+        <a onclick="hide()" href="#about-us">About Us</a>
+        <a onclick="hide()" href="./Store/">Store</a>
+        <a onclick="hide()" href="#support">Support Us</a>
+      </div>
+
+      <button class="menu-button" onclick="unhide()">≡</button>
+      <div class="container">
+        <img id="brand" src="../images/brand.png" alt="" />
+
+        <div id="nav">
+          <a class="" href="">Home</a>
+          <a class="" href="#about-us">About Us</a>
+          <a class="" href="./Store/">Store</a>
+          <a class="" href="#support">Support Us</a>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="head-text container">
+        <div id="header-text">
+          <div id="head-style">
+            <h2>Terra Heaven</h2>
+          </div>
+          <div id="span-style">
+            <span>Gaming Community</span>
+          </div>
+          <a
+            href="https://discord.gg/tHAjn2Qf6m"
+            target="_BLANK"
+            id="discord-join"
+            >Join Now</a
+          >
+        </div>
+      </div>
+    </header>
+    <section id="about-us">
+      <div class="about-us container">
+        <img
+          class="image"
+          src="../images/75f4944438071b7f0b2da0d70c2aeb3a.webp"
+          alt=""
+        />
+        <div id="about-us-text">
+          <h3>About Us</h3>
+          <p>
+            We are Terra Heaven Core Management, Our server is a place where a
+            bunch of gamer and content creators come together and make a
+            peaceful and fantastic environment around us. We hold various events
+            for members to have fun and chill. We provide various Channels for
+            Games like Valorant, Minecraft, and Among Us where they can meet new
+            people of same interests and Grind those Ranks but also make this
+            server lively.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="contacts">
+      <div class="container contacts"></div>
+    </section>
+
+    <section id="support">
+      <div class="container support">
+        <img class="image" src="../images/1658581882307.jpg" alt="" />
+        <div id="support-text">
+          <h3>Support Us</h3>
+          <p>
+            To support our server you can donate some money to us which will
+            help us to hold more events with price. You can donate us by
+            donating BAT token(if you use Brave Browser) or you can donate on
+          </p>
+          <div>
+            UPI:
+            <span class="copy" id="upi" onclick="copy(upi.innerText)"
+              >meetmehta917@okaxis</span
+            >
+          </div>
+
+          <span id="copied">Copied ✓</span>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const lol = document.getElementById("lol");
+      const navMobile = document.getElementById("nav-mobile");
+      const header = document.getElementById("navbar");
+      const copied = document.getElementById("copied");
+      const upi = document.getElementById("upi");
+
+      function unhide() {
+        if (navMobile.classList.contains("off")) {
+          navMobile.style.transform = "translateX(0)";
+          navMobile.classList.remove("off");
+        } else {
+          navMobile.style.transform = "translateX(100%)";
+          navMobile.classList.add("off");
+        }
+      }
+
+      function hide() {
+        if (!navMobile.classList.contains("off")) {
+          navMobile.style.transform = "translateX(100%)";
+          navMobile.classList.add("off");
+        }
+      }
+
+      function copy(text) {
+        copied.style.bottom = "40px";
+        navigator.clipboard.writeText(text);
+
+        setTimeout(() => {
+          copied.style.bottom = "-100px";
+        }, 3000);
+      }
+
+      document.addEventListener("scroll", () => {
+        let scroll_position = window.scrollY;
+        if (scroll_position > 150) {
+          header.style.backgroundColor = "#323232";
+        } else {
+          header.style.backgroundColor = "transparent";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="LightningLeaf" />
+    <meta
+      name="description"
+      content="Chilling Community, Gamers, Nitro, Anime, Emotes, Giveaways, and more"
+    />
+    <meta
+      property="og:image"
+      content="https://terraheaven.web.app/images/thumbnail.webp"
+    />
+    <meta name="url" content="http://www.terraheaven.fun" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon" />
+    <title>Terra Heaven</title>
+  </head>
+  <body>
+    <nav id="navbar" style="background-color: #323232">
+      <div id="nav-mobile" class="off">
+        <a onclick="hide()" href="../">Home</a>
+        <a onclick="hide()" href="../#about-us">About Us</a>
+        <a onclick="hide()" href="../Store/">Store</a>
+        <a onclick="hide()" href="../#support">Support Us</a>
+      </div>
+
+      <button class="menu-button" onclick="unhide()">≡</button>
+      <div class="container">
+        <img id="brand" src="../images/brand.png" alt="" />
+
+        <div id="nav">
+          <a class="" href="../">Home</a>
+          <a class="" href="../#about-us">About Us</a>
+          <a class="" href="../Store">Store</a>
+          <a class="" href="../#support">Support Us</a>
+        </div>
+      </div>
+    </nav>
+    <section id="store">
+      <div class="container store-flex">
+        <h3 style="color: white">Store</h3>
+
+        <div class="container store">
+          <div class="items" id="copper">
+            <p>Copper</p>
+            <img
+              onclick="showinfo(copper)"
+              src="../images/Copper_Block_JE1_BE1.png"
+              class="image"
+            />
+            <div class="buy-container">
+              <button onclick="payment(1)" class="buy-button">buy</button>
+            </div>
+          </div>
+          <div class="items" id="iron">
+            <p>Iron</p>
+            <img
+              onclick="showinfo(iron)"
+              src="../images/Block_of_Iron_JE4_BE3.webp"
+              class="image"
+            />
+            <div class="buy-container">
+              <button onclick="payment(2)" class="buy-button">buy</button>
+            </div>
+          </div>
+          <div class="items" id="gold">
+            <p>Gold</p>
+            <img
+              onclick="showinfo(gold)"
+              src="../images/Block_of_Gold_JE6_BE3.webp"
+              class="image"
+            />
+            <div class="buy-container">
+              <button onclick="payment(3)" class="buy-button">buy</button>
+            </div>
+          </div>
+          <div class="items" id="diamond">
+            <p>Diamond</p>
+            <img
+              onclick="showinfo(diamond)"
+              src="../images/Block_of_Diamond_JE5_BE3.webp"
+              class="image"
+            />
+            <div class="buy-container">
+              <button onclick="payment(4)" class="buy-button">buy</button>
+            </div>
+          </div>
+
+          <div class="items" id="netherite">
+            <p>Netherite</p>
+            <img
+              onclick="showinfo(netherite)"
+              src="../images/Block_of_Netherite_JE1_BE1.webp"
+              class="image"
+            />
+            <div class="buy-container">
+              <button onclick="payment(5)" class="buy-button">buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div onclick="hideself()" class="hidden" id="overlay"></div>
+    <div class="hidden" id="info-rank"></div>
+    <script src="main.js"></script>
+    <script>
+      const store = document.getElementById("store");
+      const lol = document.getElementById("lol");
+      const navMobile = document.getElementById("nav-mobile");
+      const header = document.getElementById("navbar");
+      const copied = document.getElementById("copied");
+      const upi = document.getElementById("upi");
+      const overlay = document.getElementById("overlay");
+      const infoRank = document.getElementById("info-rank");
+
+      function showinfo() {
+        overlay.classList.remove("hidden");
+        infoRank.classList.remove("hidden");
+        store.style.filter = "blur(5px)";
+      }
+
+      function hideself() {
+        overlay.classList.add("hidden");
+        infoRank.classList.add("hidden");
+        store.style.filter = "blur(0)";
+      }
+
+      function unhide() {
+        if (navMobile.classList.contains("off")) {
+          navMobile.style.transform = "translateX(0)";
+          navMobile.classList.remove("off");
+        } else {
+          navMobile.style.transform = "translateX(100%)";
+          navMobile.classList.add("off");
+        }
+      }
+
+      function hide() {
+        if (!navMobile.classList.contains("off")) {
+          navMobile.style.transform = "translateX(100%)";
+          navMobile.classList.add("off");
+        }
+      }
+
+      function copy(text) {
+        copied.style.bottom = "40px";
+        navigator.clipboard.writeText(text);
+
+        setTimeout(() => {
+          copied.style.bottom = "-100px";
+        }, 3000);
+      }
+
+      //   document.addEventListener("scroll", () => {
+      //     let scroll_position = window.scrollY;
+      //     if (scroll_position > 150) {
+      //   header.style.backgroundColor = "#323232";
+      //     } else {
+      //   header.style.backgroundColor = "transparent";
+      //     }
+      //   });
+    </script>
+  </body>
+</html>
